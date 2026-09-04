@@ -16457,7 +16457,8 @@ input[type=color] {
   }
   .blurbg{
     border-radius: 15px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
+    background-color: rgb(242,233,221,25%);
   }
   .px-hero-subtitle{
     font-size: 15px;
