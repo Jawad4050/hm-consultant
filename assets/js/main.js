@@ -500,9 +500,20 @@
 				"background-position": "center center"
 			});
 
-			// The ripple effect needs WebGL + float texture support, which
-			// isn't available on every device/browser. Guard it so a failure
-			// never throws uncaught and never leaves the section blank.
+			// The ripple effect opens a WebGL context per element, and
+			// browsers cap how many a single page can have open at once
+			// (Chrome allows 16). This page now has 16 ".ripple-image"
+			// containers (the hero + every destination thumbnail), so
+			// creating a context for all of them can push the hero's own
+			// context out and break its animation. Reserve the WebGL
+			// effect for the hero only; every other thumbnail just gets
+			// the plain background image set above, which is enough for
+			// a small grid photo and costs nothing.
+			if (!$container.is(".px-hero-bg-img")) return;
+
+			// The ripple effect also needs WebGL + float texture support,
+			// which isn't available on every device/browser. Guard it so
+			// a failure never throws uncaught and never leaves the hero blank.
 			try {
 				$container.ripples({
 					resolution: 400,
