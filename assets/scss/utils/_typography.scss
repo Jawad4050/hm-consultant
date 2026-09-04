@@ -1,0 +1,63 @@
+
+// font url
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap';
+
+
+@font-face {
+    font-family: 'Thunder';
+    src: url('../fonts/Thunder-BoldLC.eot');
+    src: url('../fonts/Thunder-BoldLC.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Thunder-BoldLC.woff') format('woff'),
+    url('../fonts/Thunder-BoldLC.woff2') format('woff2'),
+    url('../fonts/Thunder-BoldLC.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'ThunderMed';
+    src: url('../fonts/Thunder-MediumLC.eot');
+    src: url('../fonts/Thunder-MediumLC.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Thunder-MediumLC.woff') format('woff'),
+    url('../fonts/Thunder-MediumLC.woff2') format('woff2'),
+    url('../fonts/Thunder-MediumLC.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Morganite-Bold';
+    src: url('../fonts/Morganite-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Morganite-ExtraBold.woff') format('woff'),
+    url('../fonts/Morganite-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+}
+
+// font family
+$font-family: (
+    'ff': (
+        'body': "'Inter', sans-serif",
+        'inter': "'Inter', sans-serif",
+        'heading': "'Inter', sans-serif",
+        'p': "'Inter', sans-serif",
+        'thunder': "'Thunder', sans-serif",
+        'thundermed': "'ThunderMed', sans-serif",
+        'morganite-bold': "'Morganite-Bold', sans-serif",
+        'fontawesome': '"Font Awesome 6 Pro"',
+    )
+);
+
+// font size
+$font-size: (
+    'fz': (
+        'body': 14px,
+        'p': 16px,
+    )
+);
+
+

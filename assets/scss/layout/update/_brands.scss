@@ -1,0 +1,26 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.1 brand css start
+/*----------------------------------------*/
+
+.bf-brands{
+    &-title{
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-px-black);
+    }
+    &-item{
+        height: 180px;
+        width: 100%;
+        background: var(--tp-common-px-white);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media #{$lg}{
+            height: 90px;
+        }
+    }
+}

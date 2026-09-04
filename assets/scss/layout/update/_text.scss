@@ -1,0 +1,23 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.1 text css start
+/*----------------------------------------*/
+
+.bf-text{
+    &-slider-style{
+        & .tp-text-content span {
+            font-family: var(--tp-ff-thundermed);
+            font-size: 180px;
+            text-transform: uppercase;
+            line-height: 1;
+            color: rgba(0, 0, 0, 0.1);
+            @media #{$sm,$xs}{
+                font-size: 80px;
+            }
+        }
+        & .tp-text-slide-bottom .tp-text-content span {
+            color: var(--tp-common-px-red);
+        }
+    }
+}

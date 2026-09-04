@@ -1,0 +1,175 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.1 common css start
+/*----------------------------------------*/
+// custom-container-here
+$container:(1830,1710,1750,1650,1860,1350);
+
+@each $number in $container{
+  @media (min-width:1400px) {
+    .container-#{$number}{
+      max-width: #{$number}px;
+    }
+  }
+}
+.common-underline{
+	@include bgborder(currentColor, 0,0);
+	@include tp-transition(all .4s ease);
+	&:hover{
+		@include bgborder(currentColor, 0,100%);
+		@include tp-transition(all .4s ease);
+	}
+}
+.gx-5{
+	--bs-gutter-x: 5px;
+}
+.bf-btn{
+    &-red{
+        background: var(--tp-common-px-red);
+    }
+    &-white{
+        background: var(--tp-common-px-white);
+        color: var(--tp-common-px-black);
+        &:hover{
+            color: var(--tp-common-px-black);
+        }
+        &-border{
+            background: transparent;
+            border: 1px solid var(--tp-common-px-white);
+            color: var(--tp-common-px-white);
+            &:hover{
+                color: var(--tp-common-px-white);
+            }
+        }
+    }
+    &-rounded{
+        width: 120px;
+        height: 120px;
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--tp-common-px-black);
+        border: 1px solid #dfdfdf;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        line-height: 137%;
+        padding-top: 40px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+         &:hover{
+            color: var(--tp-common-px-white);
+            & .bf-btn-circle-dot{
+                width: 420px;
+                height: 420px;
+            }
+        }
+    }
+    &-circle{
+        &-dot{
+            position: absolute;
+            bottom: 0;
+            left: 32px;
+            width: 0px;
+            height: 0px;
+            -webkit-transition: all 0.6s ease-out;
+            -moz-transition: all 0.6s ease-out;
+            -ms-transition: all 0.6s ease-out;
+            -o-transition: all 0.6s ease-out;
+            transition: all 0.6s ease-out;
+            line-height: 20px;
+            border-radius: 50%;
+            background: #e11010;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            border: 1px solid transparent;
+            z-index: -1;
+        }
+    }
+}
+.bf-section{
+    &-title{
+        font-weight: 500;
+        font-size: 80px;
+        font-family: var(--tp-ff-thundermed);
+        text-transform: uppercase;
+        line-height: 1;
+        @media #{$lg,$md,$sm,$xs}{
+            font-size: 60px;
+            & br{
+                display: none;
+            }
+        }
+        &.fs-75{
+            font-size: 75px;
+        }
+        &-2{
+            font-size: 60px;
+            font-family: var(--tp-ff-body);
+            letter-spacing: -0.03em;
+            @media #{$lg,$md,$sm}{
+                font-size: 50px;
+            }
+            @media #{$xs}{
+                font-size: 40px;
+            }
+        }
+        &-3{
+            font-weight: 500;
+            font-size: 80px;
+            line-height: 105%;
+            letter-spacing: -0.02em;
+            @media #{$lg,$md,$sm}{
+                font-size: 60px;
+            }
+            @media #{$xs}{
+                font-size: 40px;
+            }
+        }   
+    }
+}
+.tp-section{
+    &-tittle{
+        font-weight: 500;
+        font-size: 55px;
+        line-height: 118%;
+        letter-spacing: -0.03em;
+        @media #{$lg,$md}{
+            font-size: 46px;
+        }
+        @media #{$sm,$xs}{
+            font-size: 36px;
+        }
+    }
+}
+.z-index-1 {
+    z-index: 1;
+}
+.reveal-text .char {
+    color: #b6bcc6;
+    transition: color 0.6s ease;
+}
+
+.reveal-text .char.revealed {
+    color: var(--tp-common-px-black);
+}
+.bg-position {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.tp-black-bg {
+    background: var(--tp-common-px-black);
+}
+@keyframes marquee-horizontal {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

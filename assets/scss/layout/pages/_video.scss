@@ -1,0 +1,21 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.6 video css
+/*----------------------------------------*/
+
+.px-video-4{
+    &-wrap{
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        & video{
+            width: 100%;
+        }
+        &.px-bdr-style{
+            & video{
+                border-radius: 0;
+            }
+        }
+    }
+}

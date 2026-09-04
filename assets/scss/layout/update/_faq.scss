@@ -1,0 +1,24 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.1 faq css start
+/*----------------------------------------*/
+
+.bf-faq{
+    &-wrap{
+        & .accordion-item {
+            background: var(--tp-common-px-white);
+            border-radius: 10px;
+        }
+        & .tp-faq-btn {
+            border: 1px solid transparent;
+            border-radius: 0;
+            background: transparent;
+            padding: 19px 30px;
+        }
+        & .tp-faq-details-para {
+            padding-top: 0;
+            padding-bottom: 25px;
+        }
+    }
+}

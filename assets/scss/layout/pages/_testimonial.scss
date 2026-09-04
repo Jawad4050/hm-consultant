@@ -1,0 +1,232 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.7 testimonial css
+/*----------------------------------------*/
+.px-testimonial{
+    &-area{
+        @media #{$xs}{
+            padding-top: 80px;
+        }
+    }
+    &-top-content{
+        & span{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1;
+            color: #878787;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+        }
+    }
+    &-client{
+        &-info{
+            & span{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1;
+                color: #878787;
+                letter-spacing: -0.04em;
+            }
+        }
+        &-name{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 0;
+            letter-spacing: -0.03em;
+            color: var(--tp-common-px-white);
+        }
+    }
+    &-avater{
+        & img{
+            height: 80px;
+            width: 80px;
+            overflow: hidden;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    &-item{
+        & p{
+            font-weight: 500;
+            font-size: 46px;
+            line-height: 1.1;
+            margin-bottom: 55px;
+            letter-spacing: -0.04em;
+            color: var(--tp-common-px-white);
+            @media #{$xl}{
+                font-size: 40px;
+            }
+            @media #{$md}{
+                font-size: 35px;
+            }
+            @media #{$xs}{
+                font-size: 25px;
+                & br{
+                    display: none;
+                }
+            }
+        }
+    }
+    &-slider{
+        padding-right: 65px;
+        @media #{$xs}{
+            padding-top: 70px;
+        }
+        @media #{$lg,$md,$xs} {
+            padding-right: 0;
+        }
+    }
+}
+
+.ar-testimonial{
+    &-area{
+        @media #{$xs}{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+    &-client{
+        &-info{
+            & span{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1;
+                color: #878787;
+                letter-spacing: -0.04em;
+            }
+        }
+        &-name{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 1.1;
+            margin-bottom: 5px;
+            letter-spacing: -0.03em;
+            color: var(--tp-common-px-black);
+        }
+    }
+    &-item{
+        & p{
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 40px;
+            letter-spacing: 0;
+            color: var(--tp-common-px-black); 
+            @media #{$xl}{
+                font-size: 34px;
+                & br{
+                    display: none;
+                }
+            }
+            @media #{$md}{
+                font-size: 30px;
+            }
+            @media #{$xs}{
+                font-size: 25px;
+                & br{
+                    display: none;
+                }
+            }
+        }
+    }
+    &-arrow{
+        @media #{$md,$xs}{
+            text-align: center;
+            margin-top: 70px;
+        }
+        & button{
+            width: 50px;
+            height: 50px;
+            line-height: 1;
+            transition: .3s;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid rgba(25, 25, 25, 0.1);
+            &:hover{
+                color: var(--tp-common-px-white);
+                border-color: var(--tp-common-px-orange);
+                background-color: var(--tp-common-px-orange);
+            }
+            & span{
+                & svg{
+                    margin-left: 1px;
+                }
+            }
+            &.ar-testimonial{
+                &-prev,
+                &-next{
+                    position: absolute;
+                    top: 50%;
+                    left: -85px;
+                    transform: translateY(-50%);
+                    @media #{$md,$xs}{
+                        position: static;
+                    }
+                }
+                &-next{
+                    left: auto;
+                    right: -85px;
+                }
+            }
+        }
+    }
+    &-fraction{
+        &-wrap{
+            position: absolute;
+            bottom: -80px;
+            right: 0;
+            left: 0;
+            width: 260px;
+            margin: 0 auto;
+            text-align: center;
+            display: inline-flex;
+            justify-content: center;
+            @media #{$xs}{
+                left: -60px;
+                bottom: -20px;
+            }
+            & .swiper-horizontal > .swiper-pagination-progressbar, 
+            .swiper-pagination-progressbar.swiper-pagination-horizontal, 
+            .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, 
+            .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+                width: 100%;
+                height: 2px;
+                left: 0;
+                top: auto;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+                margin: 0 30px;
+                background: #d9d9d9;
+            }
+            & .swiper-pagination-progressbar 
+            .swiper-pagination-progressbar-fill {
+                background: var(--tp-common-px-orange);
+            }
+            & .swiper-horizontal > .swiper-pagination-bullets, 
+            .swiper-pagination-bullets.swiper-pagination-horizontal, 
+            .swiper-pagination-custom, .swiper-pagination-fraction {
+                bottom: 0;
+                left: 0;
+                width: auto;
+            }
+            & .swiper-pagination-fraction{
+                & span{
+                    position: absolute;
+                    top: -10px;
+                    right: -60px;
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 1;
+                    letter-spacing: -0.01em;
+                    color: var(--tp-common-px-black);
+                    &.current{
+                        right: auto;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

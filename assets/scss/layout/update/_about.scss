@@ -1,0 +1,219 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.1 about css start
+/*----------------------------------------*/
+
+.bf-about{
+    &-video{
+        & video{
+            z-index: -1;
+            width: 770px;
+            margin-left: -55px;
+            margin-top: -50px;
+            mix-blend-mode: multiply;
+            @media #{$xs} {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+    &-dec{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 167%;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-px-black);
+    }
+    &-thumb{
+        & img{
+            border-radius: 10px;
+        }
+    }
+    &-3{
+        &-title{
+            font-weight: 500;
+            font-size: 50px;
+            line-height: 120%;
+            letter-spacing: -0.03em;
+            @media #{$lg,$md,$sm,$xs}{
+                font-size: 40px;
+            }
+            @media #{$xs}{
+                font-size: 30px;
+            }
+        }
+        &-thumb{
+            margin-top: -15px;
+            @media #{$md,$sm,$xs}{
+                margin-top: 0;
+            }
+            & img{
+                border-radius: 10px;
+            }
+            &-2{
+                @media #{$lg,$md,$sm,$xs}{
+                    margin-left: 0;
+                }
+                @media #{$sm,$xs}{
+                    padding-top: 0;
+                }
+                & img{
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-avatar{
+            border-bottom: 1px solid #e7e7e7;
+            padding-bottom: 18px;
+            margin-bottom: 34px;
+            & p{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 144%;
+                color: var(--tp-common-px-black);
+            }
+        }
+        &-subtile {
+            & span{
+                color: var(--tp-common-px-black);
+                font-size: 16px;
+            }
+        }
+        &-count{
+            &-title{
+                font-weight: 500;
+                font-size: 70px;
+                letter-spacing: -0.04em;
+            }
+            &-item{
+                & span{
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 133%;
+                    color: var(--tp-common-px-black);
+                    @media #{$xl,$lg,$md,$sm,$xs}{
+                        & br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        &-info{
+            &-wrap{
+                @media #{$lg,$md,$sm,$xs}{
+                    margin-left: 0;
+                }
+                @media #{$md,$sm,$xs}{
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+    &-us{
+        &-spacing{
+            padding-top: 185px;
+            padding-bottom: 120px;
+        }
+        &-subtitle{
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--tp-common-px-black);
+            @media #{$sm,$xs}{
+                margin-bottom: 20px;
+                display: block;
+            }
+        }
+        &-title{
+            font-weight: 600;
+            font-size: 100px;
+            line-height: 100%;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+            @media #{$md}{
+                font-size: 70px;
+            }
+            @media #{$sm}{
+                font-size: 50px;
+            }
+            @media #{$xs}{
+                font-size: 35px;
+            }
+        }
+        &-dec{
+            font-size: 18px;
+            line-height: 144%;
+            &-wrap{
+                padding-left: 443px;
+                @media #{$xl}{
+                    padding-left: 200px;
+                }
+                @media #{$lg,$md,$sm,$xs}{
+                    padding-left: 0;
+                }
+            }
+        }
+        &-gif{
+            & img{
+                max-width: 730px;
+                @media #{$sm,$xs}{
+                    width: 100%;
+                }
+            }
+        }
+        &-video{
+            & video{
+                height: 930px;
+                width: 100%;
+                object-fit: cover;
+                @media #{$xxl,$xl,$lg}{
+                    height: 700px;
+                }
+                @media #{$md,$sm,$xs}{
+                    height: 400px;
+                }
+            }
+        }
+    }
+    &-4{
+        &-title{
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 120%;
+            letter-spacing: -0.03em;
+            @media #{$lg,$md,$sm,$xs}{
+                margin-bottom: 30px;
+            }
+            @media #{$sm,$xs}{
+                font-size: 40px;
+            }
+        }
+        &-item{
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px 23px 5px 23px;
+            &-title{
+                font-weight: 500;
+                font-size: 22px;
+                letter-spacing: -0.05em;
+            }
+        }
+        &-dec{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #595959;
+        }
+        &-thumb{
+            & img{
+                border-radius: 20px;
+            }
+        }
+        &-content{
+            @media #{$xl,$lg,$md,$sm,$xs}{
+                margin-right: 0;
+            }
+        }
+    }
+}

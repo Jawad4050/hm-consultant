@@ -1,0 +1,74 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.1 header css start
+/*----------------------------------------*/
+
+.bf-header{
+    &-style{
+        & .tp-header-menu-btn {
+            background: transparent;
+            border: 1px solid var(--tp-common-px-white);
+        }
+    }
+    &-3{
+        &-style{
+            & .tp-main-menu-2 nav > ul {
+                background: var(--tp-common-px-white);
+            }
+            & .tp-header-menu-btn {
+                background: var(--tp-common-px-white);
+                &:hover{
+                    background: var(--tp-common-px-black);
+                    & span{
+                        background: var(--tp-common-px-white);
+                    }
+                }
+            }
+        }
+    }
+    &-white{
+        & .tp-main-menu-2 nav > ul {
+            background: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            border-radius: 0;
+        }
+        & .tp-main-menu nav > ul > li > a {
+            color: var(--tp-common-px-white);
+        }
+        & .tp-header-search {
+            color: var(--tp-common-px-white);
+        }
+        & .tp-header-menu-btn:hover {
+            background: var(--tp-common-px-white);
+            & span {
+                background: var(--tp-common-px-black);
+            }
+        }
+        &.header-sticky{
+            & .logo-white {
+                display: none;
+            }
+            & .logo-dark {
+                display: block!important;
+            }
+            & .tp-main-menu nav > ul > li > a {
+                color: var(--tp-common-px-black);
+            }
+            & .bf-btn-white {
+                background: var(--tp-common-px-black);
+                color: var(--tp-common-px-white);
+            }
+            & .tp-header-menu-btn {
+                background: var(--tp-common-px-black);
+                & span{
+                    background: var(--tp-common-px-white);
+                }
+            }
+            & .tp-header-search {
+                color: var(--tp-common-px-black);
+            }
+        }
+    }
+}

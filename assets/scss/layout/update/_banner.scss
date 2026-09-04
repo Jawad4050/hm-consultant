@@ -1,0 +1,51 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.1 banner css start
+/*----------------------------------------*/
+
+.bf-banner{
+    &-subtitle{
+        & span{
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: -0.02em;
+            color: var(--tp-common-px-white);
+        }
+        @media #{$md,$sm,$xs}{
+            margin-top: 0;
+        }
+    }
+    &-title{
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 111%;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-px-white);
+        @media #{$xs}{
+            font-size: 28px;
+        }
+    }
+    &-author{
+        &-info{
+            & h5{
+                font-weight: 500;
+                font-size: 20px;
+                letter-spacing: -0.02em;
+                color: var(--tp-common-px-white);
+            }
+            & span{
+                font-weight: 400;
+                font-size: 16px;
+                color: rgba(255, 255, 255, 0.65);
+            }
+        }
+    }
+    &-spacing{
+        padding-top: 480px;
+        padding-bottom: 55px;
+        @media #{$md,$sm,$xs}{
+            padding-top: 150px;
+        }
+    }
+}

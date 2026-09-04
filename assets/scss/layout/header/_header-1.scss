@@ -1,0 +1,257 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1 Header Style 1
+/*----------------------------------------*/
+.header-transparent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    width: 100%;
+}
+.header-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+    &::after{
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        content: "";
+        top: 9px;
+        left: 0;
+        right: 0;
+        width: 99%;
+        height: 77%;
+        z-index: -1;
+        margin: 0 auto;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        backdrop-filter: blur(40px);
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 1px 3px 0 rgba(19, 19, 22, 0.08);
+        animation: 0.95s ease 0s normal forwards 1 running headerSlideUp;
+        -webkit-animation: 0.95s ease 0s normal forwards 1 running headerSlideUp;
+        @media #{$lg,$md,$xs}{
+            top: 0;
+            height: 100%;
+        }
+    }
+    &.sticky-bg{
+        transition: .3s;
+        &::after{
+            opacity: 1;
+            visibility: visible;
+            transition: 0.3s ease-in-out;
+            animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
+            -webkit-animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
+        }
+        & .px-header-logo{
+            padding-top: 25px;
+            transition: .3s;
+            @media #{$lg,$md,$xs}{
+                padding-top: 0;
+            }
+            &.px-logo-pt{
+                padding-top: 0;
+            }
+        }
+    }
+    &.px-header-2-area{
+        @media #{$xs}{
+            padding-top: 15px;
+        }
+        &::after{
+            display: none;
+        }
+        &.sticky-bg .px-header-logo {
+            padding-top: 0;
+            transition: 0.3s;
+        }
+    }
+}
+.px-header-logo{
+    @media #{$lg,$md,$xs}{
+        padding-top: 0;
+    }
+    &-anim{
+        transform-origin: top left;
+    }
+}
+
+.px-header{
+    &-ptb{
+        @media #{$lg,$md,$xs}{
+            padding: 15px 0;
+        }
+    }
+    &-menu{
+        & > nav{
+            & > ul{
+                & > li{
+                    display: inline-block;
+                    list-style-type: none;
+                    &:not(:last-child){
+                        margin-right: 35px;
+                        @media #{$xl}{
+                            margin-right: 10px;
+                        }
+                        @media #{$lg}{
+                            margin-right: 20px;
+                        }
+                    }
+                    & a{
+                        padding: 30px 0;
+                        font-weight: 600;
+                        font-size: 16px;
+                        display: inline-block;
+                        color: var(--tp-common-px-white);
+                        @media #{$xl}{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        &.tp-header-dropdown {
+            & nav {
+                & ul {
+                    & li.has-dropdown {
+                        & > a{
+                            &::after{
+                                color: var(--tp-common-px-white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-bar{
+        margin-left: 40px;
+        & span{
+            margin: 8px auto;
+            width: 60px;
+            height: 2px;
+            display: block;
+            transform: translateY(5px);
+            background-color: var(--tp-common-px-white);
+        }
+    }
+    &-2{
+        &-bar{
+            & button{
+                height: 56px;
+                width: 56px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                display: inline-block;
+                border-radius: 50%;
+                background-color: var(--tp-common-px-black);
+                & span{
+                    margin: 8px auto;
+                    width: 26px;
+                    height: 2px;
+                    display: block;
+                    background-color: var(--tp-common-px-white);
+                }
+            }
+        }
+    }
+    &-style-black{
+        & .px-header-menu{
+            & nav{
+                & > ul{
+                    & > li{
+                        & > a {
+                            text-transform: uppercase;
+                            color: var(--tp-common-px-black);
+                        }
+                        &.has-dropdown{
+                            & a{
+                                &::after{
+                                    color: var(--tp-common-px-black);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .px-header-bar span {
+            background-color: var(--tp-common-px-black);
+        }
+    }
+}
+
+.px-header-6{
+    &-ptb{
+        @media #{$lg,$md,$xs} {
+            padding: 15px 0;
+        }
+    }
+    &-menu{
+        & nav{
+            & > ul{
+                & > li{
+                    margin: 20px 2px;
+                    display: inline-block;
+                    list-style-type: none;
+                    @media #{$x3l,$xxl,$xl} {
+                        margin: 20px 1px;
+                    }
+                    & > a{
+                        font-size: 15px;
+                        font-weight: 500;
+                        padding: 7px 24px;
+                        border-radius: 50px;
+                        display: inline-block;
+                        background: #F8F8F8;
+                        letter-spacing: -0.6px;
+                        text-transform: uppercase;
+                        color: var(--tp-common-px-black);
+                        @media #{$xxl} {
+                            font-size: 14px;
+                            padding: 7px 18px;
+                        }
+                        @media #{$xl} {
+                            font-size: 12px;
+                            padding: 7px 12px;
+                        }
+                    }
+                }
+            }
+        }
+        &.tp-header-dropdown {
+            & nav{
+                & ul{
+                    & li{
+                        &.has-dropdown {
+                            & > {
+                                & a{
+                                    &::after{
+                                        content: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-info{
+        & a{
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: -0.6px;
+            text-transform: uppercase;
+            color: var(--tp-common-px-black);
+        }
+    }
+}

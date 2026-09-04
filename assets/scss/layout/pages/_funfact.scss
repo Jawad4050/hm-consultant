@@ -1,0 +1,73 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.8 funfact css
+/*----------------------------------------*/
+
+.ar-funfact{
+    &-item{
+        & h4{
+            line-height: .8;
+            font-size: 100px;
+            letter-spacing: -0.04em;
+            color: var(--tp-common-px-black);
+            & i{
+                font-style: normal;
+            }
+        }
+        & span{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--tp-common-px-black);
+            @media #{$lg}{
+                font-size: 15px;
+            }
+        }
+    }
+    &-bg{
+        padding: 45px 0;
+        padding-bottom: 0;
+    }
+}
+
+.px-funfact{
+    &-inner{
+        &-style{
+            @media #{$md,$xs} {
+                padding-bottom: 50px;
+            }
+            & .ar-funfact-item h4 {
+                font-size: 100px;
+                line-height: 0.76;
+                margin-bottom: 0;
+                letter-spacing: normal;
+                text-transform: uppercase;
+                color: var(--tp-common-px-black);
+                font-family: var(--tp-ff-thunder);
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    font-size: 70px;
+                }
+            } 
+            & .ar-funfact-item {
+                padding: 45px;
+                padding-bottom: 35px;
+                box-shadow: -1px 0 0 0 #E11010;
+                border: 1px solid rgba(30, 30, 30, 0.06);
+                @media #{$xxl,$xl,$lg,$sm} {
+                    padding: 30px;
+                }
+                & span {
+                    color: #5D5D5D;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 1;
+                    letter-spacing: -0.36px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
