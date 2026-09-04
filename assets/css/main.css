@@ -6886,7 +6886,8 @@ input[type=color] {
   border-radius: 12px;
   overflow: hidden;
 }
-.ripple-image img{
+.px-project-thumb .ripple-image img,
+.px-project-3-thumb .ripple-image img {
   display: none;
 }
 .px-project-title {

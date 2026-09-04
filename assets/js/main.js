@@ -490,19 +490,30 @@
 			var $img = $container.find("img").first();
 			var imgURL = $img.attr("src");
 
+			if (!imgURL) return;
+
+			// Always set a plain CSS background first so the image is visible
+			// even if the WebGL ripple effect below can't run.
 			$container.css({
 				"background-image": "url(" + imgURL + ")",
 				"background-size": "cover",
 				"background-position": "center center"
 			});
 
-			$container.ripples({
-				resolution: 400,
-				perturbance: 0.03,
-				imageUrl: imgURL
-			});
-
-			$img.hide();
+			// The ripple effect needs WebGL + float texture support, which
+			// isn't available on every device/browser. Guard it so a failure
+			// never throws uncaught and never leaves the section blank.
+			try {
+				$container.ripples({
+					resolution: 400,
+					perturbance: 0.03,
+					imageUrl: imgURL
+				});
+				// Only hide the <img> once the canvas ripple actually took over.
+				$img.hide();
+			} catch (err) {
+				console.warn("Ripple effect unavailable, falling back to static background image.", err);
+			}
 		});
 
 	});
