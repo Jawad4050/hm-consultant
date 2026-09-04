@@ -1525,7 +1525,7 @@ input[type=color] {
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .px-section-subtitle {
     padding-top: 0;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
@@ -1576,7 +1576,7 @@ input[type=color] {
 }
 @media (max-width: 767px) {
   .px-section-title {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 .px-section-title.white-style {
@@ -5085,7 +5085,7 @@ input[type=color] {
 }
 @media (max-width: 767px) {
   .px-hero-bg {
-    padding-top: 140px;
+    padding-top: 95px;
     border-radius: 0 0 30px 30px;
   }
   .px-hero-info-wrap{
@@ -16466,4 +16466,11 @@ input[type=color] {
   .px-hero-para{
     line-height: 19px;
   }
+  .px-award-content > span {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 8px;
+    letter-spacing: 0em;
+    color: var(--tp-common-px-black);
+}
 }
