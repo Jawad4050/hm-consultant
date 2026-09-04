@@ -1955,7 +1955,7 @@ input[type=color] {
   height: 2px;
   display: block;
   transform: translateY(5px);
-  background-color: var(--tp-common-px-white);
+  background-color: var(--hm-navy);
 }
 .px-header-2-bar button {
   height: 56px;
