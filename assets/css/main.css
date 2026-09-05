@@ -8599,9 +8599,9 @@ input[type=color] {
 }
 .px-award-content > span {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.8px;
   color: var(--tp-common-px-black);
 }
 .px-award-item {
