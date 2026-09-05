@@ -8609,16 +8609,16 @@ input[type=color] {
   border-bottom: 1px solid rgba(10, 10, 10, 0.08);
 }
 .px-award-item .row [class*=col-]:nth-child(3) .px-award-nomination {
-  padding-left: 120px;
+  padding-left: 20px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .px-award-item .row [class*=col-]:nth-child(3) .px-award-nomination {
-    padding-left: 90px;
+    padding-left: 20px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .px-award-item .row [class*=col-]:nth-child(3) .px-award-nomination {
-    padding-left: 50px;
+    padding-left: 20px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
